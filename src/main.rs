@@ -1,4 +1,6 @@
-use clap::{Parser,Subcommand};
+mod data_file;
+
+use clap::{Parser, Subcommand};
 
 #[derive(Parser)]
 #[clap(author,version,about,long_about = None)]
@@ -22,7 +24,7 @@ fn main() {
 
     match &cli.command{
             Commands::Open {directory} =>{
-                println!("Opening {:?} ",directory)
+                println!("Opening {:?} ",directory);
             }
     }
 
