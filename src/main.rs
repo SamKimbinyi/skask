@@ -1,5 +1,4 @@
 mod data_file;
-
 use clap::{Parser, Subcommand};
 
 #[derive(Parser)]
@@ -25,6 +24,7 @@ fn main() {
     match &cli.command{
             Commands::Open {directory} =>{
                 println!("Opening {:?} ",directory);
+                data_file::load_kask("test.txt".to_string());
             }
     }
 
